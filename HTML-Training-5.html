@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    /* container */
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .child {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+    }
+
+    .graybox1 {
+      left: -400px;
+    }
+    .graybox2 {
+      left: -800px;
+    }
+    .darkgraybox {
+      top: 55%;
+      left: 45%;
+      z-index: 1;
+    }
+
+    /* position */
+    .position-relative {
+      position: relative;
+    }
+
+    .position-absolute {
+      position: absolute;
+    }
+
+    /* width height */
+    .width-80 {
+      width: 80px;
+    }
+    .height-800 {
+      height: 800px;
+    }
+    .wh-40 {
+      width: 40px;
+      height: 40px;
+    }
+    .wh-400 {
+      width: 400px;
+      height: 400px;
+    }
+    .wh-800 {
+      width: 800px;
+      height: 800px;
+    }
+
+    /* background color */
+    .bgc-lightgray {
+      background-color: #D9D9D9;
+    }
+    .bgc-gray {
+      background-color: #B9B9B9;
+    }
+    .bgc-darkgray {
+      background-color: #5F5F5F
+    }
+
+    /* margin padding */
+    .margin-40 {
+      margin: 40px;
+    }
+    
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- 40px*40px 연회색 11개 -->
+    <div class="width-80 height-800 child"> 
+      <div class="wh-40 bgc-lightgray"></div>
+      <div class="wh-40 bgc-lightgray"></div>
+      <div class="wh-40 bgc-lightgray"></div>
+      <div class="wh-40 bgc-lightgray"></div>
+      <div class="wh-40 bgc-lightgray"></div>
+      <div class="wh-40 bgc-lightgray"></div>
+      <div class="wh-40 bgc-lightgray"></div>
+      <div class="wh-40 bgc-lightgray"></div>
+      <div class="wh-40 bgc-lightgray"></div>
+      <div class="wh-40 bgc-lightgray"></div>
+      <div class="wh-40 bgc-lightgray"></div>
+    </div>
+    <!-- 800px*800px 연회색 1개 -->
+    <div>
+      <div class="wh-800 bgc-lightgray"></div>
+    </div>
+    <div>
+      <!-- 400px*400px 회색 2개 -->
+      <div class="graybox1 position-relative wh-400 bgc-gray"></div>
+      <div class="graybox2 position-relative wh-400 bgc-gray"></div>
+      <!-- 400px*400px 진회색 1개-->
+      <div class="darkgraybox position-absolute wh-400 bgc-darkgray"></div>
+    </div>
+  </div>
+</body>
+</html>
