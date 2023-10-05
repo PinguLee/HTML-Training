@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    #root {
+      display: flex;
+      flex-direction: row;
+      text-align: center;
+    }
+    #root a {
+      text-decoration: none;
+      color: inherit;
+    }
+    #root li {
+      margin: 5px;
+    }
+    #root > div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #656565;
+      font-size: 70px;
+      color: #CEF1D7;
+      width: 50vw;
+      height: 100vh;
+    }
+    #root > ul {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      list-style: none;
+      padding: 0px;
+      background-color: #AAC6B1;
+      font-size: 25px; 
+      color: #656565;
+      width: 50vw;
+      height: 100vh;
+    }
+
+    /* pc */
+    @media (min-width: 1200px) {
+      #root {
+        flex-direction: column-reverse;
+      }
+      #root > div {
+        width: 100vw;
+        height: 80vh;
+      }
+      #root ul {
+        display: flex;
+        flex-direction: row;
+        width: 100vw;
+        height: 20vh;
+      }
+    }
+
+    /* tablet */
+    @media (min-width: 768px) and (max-width: 1199px) {
+      #root {
+        flex-direction: column-reverse;
+      }
+      #root > div {
+        width: 100vw;
+        height: 70vh;
+      }
+      #root > ul {
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+        height: 30vh;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="root">
+    <div>
+      <p>B</p>
+    </div>
+    <ul>
+      <li><a href="./HTML-Training-8-1.html">A</a></li>
+      <li><a href="./HTML-Training-8-2.html">B</a></li>
+      <li><a href="./HTML-Training-8-3.html">C</a></li>
+    </ul>
+  </div>
+</body>
+</html>
